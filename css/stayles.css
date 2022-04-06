@@ -1,3 +1,33 @@
+/* CUSTOM PROPS */
+:root{
+    --font-family-text:"Alata", "Arial", sans-serif;
+    --font-family-heading:"Josefin Sans", "Arial", sans-serif;
+    --text-color:#fff;
+    --background-color:#f2f2f2;
+    --heading-color:#000;
+}
+
+/* FONTS */
+@font-face {
+    font-family: "Josefin Sans";
+    src: url("../fonts/") format("woff2"),
+        url("../fonts/JosefinSans-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Alata";
+    src: url("../fonts/Alata-Regular.woff2") format("woff2"),
+        url("../fonts/Alata-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
 /* GLOBAL */
 html{
     box-sizing: border-box;
@@ -18,8 +48,8 @@ body{
     font-size: 16px;
     line-height: 1.5;
     font-family: "Arial",sans-serif;
-    background-color: #fff;
-    color: #222;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 img{
@@ -40,4 +70,46 @@ img{
 /* MAIN-CONTENT */
 .main-content{
     flex-grow: 1;
+}
+
+
+.site-header-hero-wrapper {
+    background-image: url(../img/hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+}
+
+
+/* HERO */
+.site-header {
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+.site-header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 165px;
+    padding-left: 165px;
+}
+
+.site-header-link {
+    flex-shrink: 0;
+    display: flex;
+    text-decoration: none;
+    margin-right: auto;
+}
+
+.site-header-img {
+}
+
+.sitenav {
+}
+.site-header-list {
+}
+.site-header-item {
+}
+.sitenav-link {
 }
