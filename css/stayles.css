@@ -2,9 +2,9 @@
 :root{
     --font-family-text:"Alata", "Arial", sans-serif;
     --font-family-heading:"Josefin Sans", "Arial", sans-serif;
-    --text-color:#fff;
+    --white-color:#fff;
     --background-color:#f2f2f2;
-    --heading-color:#000;
+    --black-color:#000;
 }
 
 /* FONTS */
@@ -50,12 +50,17 @@ body{
     line-height: 25px;
     font-family: var(--font-family-text);
     background-color: var(--background-color);
-    color: var(--text-color);
+    color: var(--white-color);
 }
 
 img{
     max-width: 100%;
     height: auto;
+}
+
+*:focus{
+    outline: 2px dotted #a944c8;
+    outline-offset: 3px;
 }
 
 /* CONTAINER */
@@ -133,7 +138,7 @@ img{
 
 .sitenav-link {
     display: block;
-    color: var(--text-color);
+    color: var(--white-color);
     text-decoration: none;
     border-bottom: 2px solid transparent;
     transition: border-bottom 0.4s ease;
@@ -150,7 +155,7 @@ img{
 /* OFFER */
 .site-header-offer {
     width: 640px;
-    border: 2px solid var(--text-color);
+    border: 2px solid var(--white-color);
     margin-bottom: 82px;
 
 }
@@ -182,13 +187,13 @@ img{
     width: 541px;
     padding-top: 96px;
     padding-left: 96px;
-    background-color: #fff;
+    background-color: var(--white-color);
 }
 
 .main-top-heading {
     margin-top: 0;
     margin-bottom: 25px;
-    color: var(--heading-color);
+    color: var(--black-color);
     font-weight: 300;
     font-size: 48px;
     line-height: 48px;
@@ -198,7 +203,7 @@ img{
 
 .main-top-text {
     margin: 0;
-    color: var(--heading-color);
+    color: var(--black-color);
 }
 
 
@@ -224,7 +229,7 @@ img{
     font-weight: 300;
     font-size: 48px;
     line-height: 48px;
-    color: var(--heading-color);
+    color: var(--black-color);
     text-transform: uppercase;
 }
 
@@ -236,15 +241,15 @@ img{
     text-transform: uppercase;
     font-size: 14px;
     line-height: 14px;
-    border:1px solid var(--heading-color);
-    color: var(--heading-color);
+    border:1px solid var(--black-color);
+    color: var(--black-color);
     cursor: pointer;
     transition:background-color 0.4s ease, color  0.4s ease;
 }
 
 .main-buttom-link:hover{
-    background-color:var(--heading-color);
-    color: var(--text-color);
+    background-color:var(--black-color);
+    color: var(--white-color);
 }
 
 .main-bottom-list {
@@ -325,7 +330,7 @@ img{
     padding: 0;
     padding: 224px 110px 32px 40px;
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--white-color);
     text-transform: uppercase;
     font-family: var(--font-family-heading);
     font-weight: 300;
@@ -337,7 +342,7 @@ img{
 
 /* FOOTER */
 .footer{
-    background-color: var(--heading-color);
+    background-color: var(--black-color);
 }
 
 .site-footer {
@@ -365,7 +370,7 @@ img{
 }
 
 .site-footer-link:hover{
-    border-bottom: 2px solid var(--text-color);
+    border-bottom: 2px solid var(--white-color);
 }
 
 .site-footer-link:active{
@@ -380,4 +385,77 @@ img{
     display: inline-block;
     width: 24px;
     height: 24px;
+}
+
+.site-footer-protective{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-footer-protective-text{
+    margin: 0;
+    font-size: 15px;
+    line-height: 25px;
+    opacity: 0.5;
+}
+
+
+/* RETINA-BG */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+
+    .main-bottom-item:nth-child(1){
+        background-image: url(../img/deep-earth@2x.jpg);
+        background-repeat:no-repeat;
+        background-size: cover;
+    }
+
+    .main-bottom-item:nth-child(2){
+        background-image: url(../img/night-arcade@2x.jpg);
+        background-repeat:no-repeat;
+        background-size: cover;
+    }
+
+    .main-bottom-item:nth-child(3){
+        background-image: url(../img/soccer-team-vr@2x.jpg);
+        background-repeat:no-repeat;
+        background-size: cover;
+    }
+
+    .main-bottom-item:nth-child(4){
+        background-image: url(../img/the-grid@2x.jpg);
+        background-repeat:no-repeat;
+        background-size: cover;
+    }
+
+    .main-bottom-item:nth-child(5){
+        background-image: url(../img/from-up@2x.jpg);
+        background-repeat:no-repeat;
+        background-size: cover;
+    }
+
+    .main-bottom-item:nth-child(6){
+        background-image: url(../img/pocket-borealis@2x.jpg);
+        background-repeat:no-repeat;
+        background-size: cover;
+    }
+
+    .main-bottom-item:nth-child(7){
+        background-image: url(../img/the-curiosity@2x.jpg);
+        background-repeat:no-repeat;
+        background-size: cover;
+    }
+
+    .main-bottom-item:nth-child(8){
+        background-image: url(../img/make-it-fisheye@2x.jpg);
+        background-repeat:no-repeat;
+        background-size: cover;
+    }
+
 }
