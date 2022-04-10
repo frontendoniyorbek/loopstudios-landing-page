@@ -49,8 +49,8 @@ body{
     font-size: 15px;
     line-height: 25px;
     font-family: var(--font-family-text);
-    background-color: var(--background-color);
-    color: var(--white-color);
+    background-color: var(--white-color);
+    color: rgba(0, 0, 0, 0.5);
 }
 
 img{
@@ -66,9 +66,9 @@ img{
 /* CONTAINER */
 .container{
     width: 100%;
-    max-width: 1210px;
-    padding-left: 50px;
-    padding-right: 50px;
+    max-width: 1150px;
+    padding-left: 20px;
+    padding-right: 20px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -76,6 +76,7 @@ img{
 /* MAIN-CONTENT */
 .main-content{
     flex-grow: 1;
+    background-color: var(--background-color);
 }
 
 
@@ -84,6 +85,7 @@ img{
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
+    background-color: var(--black-color);
 }
 
 
@@ -122,7 +124,7 @@ img{
     display: block;
     width: 192px;
     height: 32px;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .site-header-list {
@@ -130,6 +132,7 @@ img{
     margin: 0;
     padding: 0;
     list-style: none;
+    padding-left: 24px;
 }
 
 .site-header-item:not(:last-child) {
@@ -169,31 +172,41 @@ img{
     line-height: 70px;
     font-family: var(--font-family-heading);
     text-transform: uppercase;
+    color: var(--white-color);
     margin: 0;
 }
 
 
 /* MAIN-TOP */
-.main-top {
-    margin-top: 160px;
-    padding-top: 184px;
-    padding-left: 570px;
-    background-image: url(../img/interactive.jpg);
-    background-repeat: no-repeat;
+.promo {
+    padding-top: 160px;
+    padding-bottom: 92px;
 }
 
-.main-top-title {
-    display: block;
+.promo-container{
+    display: flex;
+    align-items: flex-end;
+}
+
+.promo-img{
+    flex-shrink: 0;
+    width: 731px;
+    height: 500px;
+    object-fit: cover;
+}
+
+.promo-info {
     width: 541px;
     padding-top: 96px;
     padding-left: 96px;
+    margin-left: -161px;
     background-color: var(--white-color);
+    color: var(--black-color);
 }
 
-.main-top-heading {
+.promo-heading {
     margin-top: 0;
     margin-bottom: 25px;
-    color: var(--black-color);
     font-weight: 300;
     font-size: 48px;
     line-height: 48px;
@@ -201,9 +214,9 @@ img{
     font-family: var(--font-family-heading);
 }
 
-.main-top-text {
+.promo-text {
     margin: 0;
-    color: var(--black-color);
+    opacity: 0.5;
 }
 
 
@@ -456,6 +469,10 @@ only screen and (                min-resolution: 2dppx) {
         background-image: url(../img/make-it-fisheye@2x.jpg);
         background-repeat:no-repeat;
         background-size: cover;
+    }
+
+    .site-header-hero-wrapper {
+        background-image: url(../img/hero-bg@2x.jpg);
     }
 
 }
