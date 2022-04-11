@@ -2,7 +2,6 @@
 :root{
     --font-family-text:"Alata", "Arial", sans-serif;
     --font-family-heading:"Josefin Sans", "Arial", sans-serif;
-    --background-color:#f2f2f2;
 }
 
 /* FONTS */
@@ -97,7 +96,7 @@ img{
 /* MAIN-CONTENT */
 .main-content{
     flex-grow: 1;
-    background-color: var(--background-color);
+    color: #fff;
 }
 
 
@@ -114,8 +113,6 @@ img{
 .site-header {
     padding-top: 64px;
     padding-bottom: 64px;
-    padding-right: 115px;
-    padding-left: 115px;
 }
 
 .site-header-container {
@@ -148,15 +145,36 @@ img{
     object-fit: contain;
 }
 
-.site-header-list {
+
+/* SITE-LIST */
+.site-list {
     display: flex;
     margin: 0;
     padding: 0;
     list-style: none;
-    padding-left: 24px;
 }
 
-.site-header-item:not(:last-child) {
+.site-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.site-item::after{
+    width: 45%;
+    height: 2px;
+    margin-top: 8px;
+    background-color: #fff;
+    content: "";
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.site-item:hover::after{
+    opacity: 1;
+}
+
+.site-item:not(:last-child) {
     margin-right: 32px;
 }
 
@@ -164,17 +182,8 @@ img{
     display: block;
     color: #fff;
     text-decoration: none;
-    border-bottom: 2px solid transparent;
-    transition: border-bottom 0.4s ease;
 }
 
-.sitenav-link:hover{
-    border-bottom: 2px solid var(--background-color);
-}
-
-.sitenav-link:active{
-    opacity: 0.6;
-}
 
 /* OFFER */
 .site-header-offer {
@@ -408,7 +417,7 @@ img{
     font-size: 15px;
     line-height: 25px;
     color: #fff;
-    opacity: 0.5;
+    color: rgba(255, 255, 255, 0.5);
 }
 
 
@@ -420,4 +429,7 @@ only screen and (     -o-min-device-pixel-ratio: 2/1),
 only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
+    .site-header-hero-wrapper {
+        background-image: url(../img/hero-bg.jpg);
+    }
 }
